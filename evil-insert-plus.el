@@ -7,8 +7,8 @@
 ;; Keywords: evil, vim, editing
 
 ;;; Commentary:
-;; This package provides `evil-insert-plus` and `evil-append-plus`,
-;; allowing you to use insertion commands with motions and text objects.
+;; This package allows you to use insertion commands with motions and text
+;; objects.
 
 ;;; Code:
 
