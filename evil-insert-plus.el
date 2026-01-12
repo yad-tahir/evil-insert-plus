@@ -10,6 +10,10 @@
 ;; This package provides `evil-insert-plus` and `evil-append-plus`,
 ;; allowing you to use insertion commands with motions and text objects.
 
+;;; Code:
+
+(require 'evil)
+
 (evil-define-operator evil-insert-plus (beg end &optional type count)
   "Perform `evil-insert' with a motion."
   (interactive "<R><c>") ; <R> for range and type, <c> for count
@@ -49,9 +53,8 @@
 	  (let* ((range (evil-visual-range))
 			 (beg-col (evil-column (car range)))
 			 (end-col (evil-column (cadr range)))
-			 (left-col (min beg-col end-col))
+			 (_left-col (min beg-col end-col))
 			 (right-col (max beg-col end-col)))
-		(ignore left-col) ;; Silent the compiler!
 		(goto-char beg)
 		(move-to-column (- right-col 1))
 		(evil-append count vcount)))
@@ -62,3 +65,5 @@
 	  (evil-append count vcount)))))
 
 (provide 'evil-insert-plus)
+
+;;; evil-insert-plus.el ends here
