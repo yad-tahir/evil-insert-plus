@@ -55,16 +55,14 @@
 			 (end-col (evil-column (cadr range)))
 			 (right-col (max beg-col end-col)))
 		(goto-char beg)
-		(move-to-column (- right-col 1))
+		(move-to-column (1- right-col))
 		(evil-append count vcount)))
 	 ((eq type 'exclusive)
-	  ;; Subtract 2: 1 for exclusive and 1 for append's natural one-char movement
-	  (goto-char (if (eolp) end (- end 2)))
-	  (evil-append count vcount))
+	  (goto-char (if (eolp) end (1- end)))
+	  (evil-insert count vcount))
 	 (t
-	  ;; Subtract 1 because append moves the cursor by one char naturally.
-	  (goto-char (if (eolp) end (- end 1)))
-	  (evil-append count vcount)))))
+	  (goto-char end)
+	  (evil-insert count vcount)))))
 
 (provide 'evil-insert-plus)
 
