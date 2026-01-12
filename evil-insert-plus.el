@@ -58,7 +58,10 @@
 		(move-to-column (1- right-col))
 		(evil-append count vcount)))
 	 ((eq type 'exclusive)
-	  (goto-char (if (eolp) end (1- end)))
+	  (unless (memq evil-this-motion '(evil-forward-char
+									   evil-forward-chars))
+		(setq end (if (eolp) end (1- end))))
+	  (goto-char end)
 	  (evil-insert count vcount))
 	 (t
 	  (goto-char end)
