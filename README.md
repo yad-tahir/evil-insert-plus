@@ -12,6 +12,7 @@ In standard Vim/Evil, `i` and `a` are simple commands that act on the current cu
 * **Grammatical Insertion**: Use patterns like `[prefix] i [motion]` (e.g., "Insert at start of paragraph").
 * **Visual Block Support**: Intelligent line-counting ensures multi-line insertions (via Visual Block) work seamlessly.
 * **Motion Awareness**: Automatically switches to line-insertion or character-insertion based on the motion type.
+* **Repeatability**: Like delete and update operations. Repeat executing your insert and append operations.
 * **Zero Dependencies**: Requires only `evil`.
 
 ---
@@ -62,11 +63,12 @@ Because `I` and `A` are now operators, applying them to the current line (the de
 
 | Key Sequence | Description |
 | :--- | :--- |
-| `I w` | Jump to the **beginning** of the current word and enter Insert state. |
-| `A e` | Jump to the **end** of the current word and enter Append state. |
+| `I w` | Jump to the **beginning** of the current word and insert. |
+| `A e` | Jump to the **end** of the current word and insert. |
+| `A i W` | Jump to the **end** of the current WORD and insert. |
 | `I (` | Jump to the inner start of the **parentheses** and insert. |
-| `A i p` | Jump to the **end of the paragraph** and append. |
-| `I G` | Jump to the start of the **last line** of the buffer and insert. |
+| `A i p` | Jump to the **end of the paragraph** and insert. |
+| `A G` | Jump to the end of of the buffer and insert. |
 
 ### Visual Block & Line Modes
 
