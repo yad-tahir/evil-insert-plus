@@ -30,6 +30,9 @@
 	(cond
 	 ((eq type 'line)
 	  (evil-insert-line count vcount))
+	 ((eq type 'block)
+	  (goto-char beg)
+	  (evil-insert count vcount))
 	 (t
 	  (goto-char beg)
 	  (evil-insert count vcount)))))
