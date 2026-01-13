@@ -48,6 +48,10 @@
 						   (set-mark m)))))))
 	(cond
 	 ((eq type 'line)
+	  ;; goto-line motions
+	  (unless (or (evil-visual-state-p)
+				   (eq evil-this-motion 'evil-line-or-visual-line))
+		(goto-char end))
 	  (evil-append-line count vcount))
 	 ((eq type 'block)
 	  (let* ((range (evil-visual-range))
