@@ -1,6 +1,5 @@
 # evil-insert-plus
 
-[![License: GPL v2](https://img.shields.io/badge/License-GPLv2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 [![Evil](https://img.shields.io/badge/editor-emacs-7F5AB6.svg?logo=gnu-emacs&logoColor=white)](https://www.gnu.org/software/emacs/)
 
 **evil-insert-plus** transforms the standard `evil-mode` insertion commands into **operators**.
