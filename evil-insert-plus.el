@@ -3,7 +3,7 @@
 ;; Author: Yad Tahir <yad at ieee.org>
 ;; URL: https://github.com/yad-tahir/evil-insert-plus
 ;; Package-Requires: ((emacs "24.4") (evil "1.14.0"))
-;; Version: 0.5.1
+;; Version: 0.5.2
 ;; Keywords: emulations, textvim, editing
 
 ;; This file is not part of GNU Emacs.
