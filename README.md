@@ -1,4 +1,4 @@
-# evil-insert-plus
+# 🖋️ evil-insert-plus
 
 [![Evil](https://img.shields.io/badge/editor-emacs-7F5AB6.svg?logo=gnu-emacs&logoColor=white)](https://www.gnu.org/software/emacs/)
 
@@ -6,7 +6,7 @@
 
 In standard Vim/Evil, `i` and `a` are simple commands that act on the current cursor position. This package redefines them as evil operators, allowing you to combine them with the full power of Evil **motions** and **text objects**.
 
-## 🚀 Features
+## Features
 
 * **Grammatical Insertion**: Use patterns like `[prefix] i [motion]` (e.g., "Insert at start of paragraph").
 * **Visual Block Support**: Intelligent line-counting ensures multi-line insertions (via Visual Block) work seamlessly.
