@@ -14,8 +14,6 @@ In standard Vim/Evil, `i` and `a` are simple commands that act on the current cu
 * **Repeatability**: Like delete and update operations. Repeat executing your insert and append commands.
 * **Zero Dependencies**: Requires only `evil`.
 
----
-
 ## Installation
 
 If you have cloned the repo locally to `~/.emacs.d/lisp/evil-insert-plus`:
