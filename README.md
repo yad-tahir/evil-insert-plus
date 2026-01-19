@@ -1,6 +1,6 @@
 # 🖋️ evil-insert-plus
 
-[![Evil](https://img.shields.io/badge/editor-emacs-7F5AB6.svg?logo=gnu-emacs&logoColor=white)](https://www.gnu.org/software/emacs/)
+[![Evil](https://img.shields.io/badge/editor-emacs-7F5AB6.svg?logo=gnu-emacs&logoColor=white)](https://www.gnu.org/software/emacs/) [![MELPA](https://melpa.org/packages/evil-insert-plus-badge.svg)](https://melpa.org/#/evil-insert-plus)
 
 **evil-insert-plus** transforms the standard `evil-mode` insertion commands into **operators**.
 
@@ -16,22 +16,21 @@ In standard Vim/Evil, `i` and `a` are simple commands that act on the current cu
 
 ## Installation
 
-If you have cloned the repo locally to `~/.emacs.d/lisp/evil-insert-plus`:
-
-### Using [use-package](https://github.com/jwiegley/use-package)
+### use-package with [Melpa](https://github.com/melpa/melpa)
 
 ```elisp
 (use-package evil-insert-plus
-  :load-path "~/.emacs.d/lisp/evil-insert-plus"
-  :bind (:map evil-normal-state-map
-		 ("I" . evil-insert-plus)
-		 ("A" . evil-append-plus)
-		 :map evil-visual-state-map
-		 ("I" . evil-insert-plus)
-		 ("A" . evil-append-plus)))
+:bind (:map evil-normal-state-map
+        ("I" . evil-insert-plus)
+        ("A" . evil-append-plus)
+        :map evil-visual-state-map
+        ("I" . evil-insert-plus)
+        ("A" . evil-append-plus)))
 ```
 
 ### Manual Installation
+
+If you have cloned the repo locally to `~/.emacs.d/lisp/evil-insert-plus`, then
 
 ```elisp
 (add-to-list 'load-path "/path/to/evil-insert-plus")
@@ -39,10 +38,22 @@ If you have cloned the repo locally to `~/.emacs.d/lisp/evil-insert-plus`:
 
 ;; Replace default I/A with operator versions in Normal and Visual states
 (with-eval-after-load 'evil
-  (define-key evil-normal-state-map (kbd "I") 'evil-insert-plus)
-  (define-key evil-normal-state-map (kbd "A") 'evil-append-plus)
-  (define-key evil-visual-state-map (kbd "I") 'evil-insert-plus)
-  (define-key evil-visual-state-map (kbd "A") 'evil-append-plus))
+        (define-key evil-normal-state-map (kbd "I") 'evil-insert-plus)
+        (define-key evil-normal-state-map (kbd "A") 'evil-append-plus)
+        (define-key evil-visual-state-map (kbd "I") 'evil-insert-plus)
+        (define-key evil-visual-state-map (kbd "A") 'evil-append-plus))
+```
+You may also use 'package-use' as showing below:
+
+```elisp
+(use-package evil-insert-plus
+:load-path "~/.emacs.d/lisp/evil-insert-plus"
+:bind (:map evil-normal-state-map
+        ("I" . evil-insert-plus)
+        ("A" . evil-append-plus)
+        :map evil-visual-state-map
+        ("I" . evil-insert-plus)
+        ("A" . evil-append-plus)))
 ```
 
 ## Usage
