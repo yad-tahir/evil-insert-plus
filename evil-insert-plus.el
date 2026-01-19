@@ -1,4 +1,4 @@
-;;; evil-insert-plus.el --- Use insert and append as operators -*- lexical-binding: t; -*-
+;;; evil-insert-plus.el --- Use insert and append as evil operators -*- lexical-binding: t; -*-
 
 ;; Author: Yad Tahir <yad at ieee.org>
 ;; URL: https://github.com/yad-tahir/evil-insert-plus
