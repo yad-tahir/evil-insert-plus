@@ -11,8 +11,8 @@ In standard Vim/Evil, `i` and `a` are simple commands that act on the current cu
 * **Grammatical Insertion**: Use patterns like `[prefix] i [motion]` (e.g., "Insert at start of paragraph").
 * **Visual Block Support**: Intelligent line-counting ensures multi-line insertions (via Visual Block) work seamlessly.
 * **Motion Awareness**: Automatically switches to line-insertion or character-insertion based on the motion type.
-* **Repeatability**: Like delete and update operations. Repeat executing your insert and append commands.
-* **Zero Dependencies**: Requires only `evil`.
+* **Repeatability**: Like delete and update operations, Repeat executing your insert and append commands.
+* **Minimal Dependencies**: Requires only `evil`.
 
 ## Installation
 
