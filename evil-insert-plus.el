@@ -84,7 +84,7 @@ IS-APPEND determines if the operation is an append or insert."
   (interactive "<R><c>") ; <R> for range and type, <c> for count
   (let ((vcount (evil-insert-plus--vcount)))
     (cond
-     ((eq type 'line)
+     ((memq type '(line screen-line))
       ;; visual-goto-line motions - e.g. `evil-goto-first-line'
       (unless (or (evil-visual-state-p)
                   (eq evil-this-motion 'evil-line-or-visual-line))
@@ -104,7 +104,7 @@ IS-APPEND determines if the operation is an append or insert."
   (interactive "<R><c>") ; <R> for range and type, <c> for count
   (let ((vcount (evil-insert-plus--vcount)))
     (cond
-     ((eq type 'line)
+     ((memq type '(line screen-line))
       ;; visual-goto-line motions - e.g. `evil-goto-line'
       (unless (or (evil-visual-state-p)
                   (eq evil-this-motion 'evil-line-or-visual-line))
